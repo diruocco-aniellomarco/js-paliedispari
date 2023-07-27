@@ -1,6 +1,16 @@
-const giocataUser = prompt('Scegli "pari" o "dispari"').toLowerCase();
-const numUser = parseInt(prompt('Inserisci un numero intero tra 1 e 5'));
+let giocataUser = prompt('Scegli "pari" o "dispari"').toLowerCase();
 
+
+while (giocataUser != 'pari' && giocataUser != 'dispari') {
+    giocataUser = prompt('Attenzione, puoi scegli solo "pari" o "dispari"').toLowerCase();
+}
+
+
+let numUser = parseInt(prompt('Inserisci un numero intero tra 1 e 5'));
+
+while (numUser >= 6 || numUser < 0 || isNaN(numUser)) {
+    numUser = parseInt(prompt('Attenzione puoi inserire solo un numero intero tra 1 e 5'));
+}
 
 function numRandom () {
     const numeroRandom = Math.floor(Math.random() * 5) + 1;

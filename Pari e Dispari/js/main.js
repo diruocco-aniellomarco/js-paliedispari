@@ -8,7 +8,7 @@ while (giocataUser != 'pari' && giocataUser != 'dispari') {
 
 let numUser = parseInt(prompt('Inserisci un numero intero tra 1 e 5'));
 
-while (numUser >= 6 || numUser < 0 || isNaN(numUser)) {
+while (numUser > 5 || numUser < 1 || isNaN(numUser)) {
     numUser = parseInt(prompt('Attenzione puoi inserire solo un numero intero tra 1 e 5'));
 }
 
